@@ -1,0 +1,122 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "name": "Banana",
+      "price": 10,
+      "stock": 10
+    },
+    {
+      "id": 2,
+      "name": "Abacate",
+      "price": 20,
+      "stock": 5
+    },
+    {
+      "id": 3,
+      "name": "Uva",
+      "price": 15,
+      "stock": 9
+    },
+    {
+      "id": 4,
+      "name": "Pão",
+      "price": 10,
+      "stock": 12
+    },
+    {
+      "id": 5,
+      "name": "Alface",
+      "price": 16,
+      "stock": 16
+    },
+    {
+      "id": 6,
+      "name": "Requeijão",
+      "price": 15,
+      "stock": 20
+    },
+    {
+      "id": 7,
+      "name": "Minecraft",
+      "price": 17,
+      "stock": 7
+    },
+    {
+      "id": 8,
+      "name": "Banana",
+      "price": 10,
+      "stock": 10
+    },
+    {
+      "id": 9,
+      "name": "Abacate",
+      "price": 20,
+      "stock": 5
+    },
+    {
+      "id": 10,
+      "name": "Uva",
+      "price": 15,
+      "stock": 9
+    },
+    {
+      "id": 11,
+      "name": "Pão",
+      "price": 10,
+      "stock": 12
+    },
+    {
+      "id": 12,
+      "name": "Alface",
+      "price": 16,
+      "stock": 16
+    },
+    {
+      "id": 13,
+      "name": "Minecraft",
+      "price": 17,
+      "stock": 7
+    },
+    {
+      "id": 14,
+      "name": "Banana",
+      "price": 10,
+      "stock": 10
+    },
+    {
+      "id": 15,
+      "name": "Abacate",
+      "price": 20,
+      "stock": 5
+    },
+    {
+      "id": 16,
+      "name": "Uva",
+      "price": 15,
+      "stock": 9
+    },
+    {
+      "id": 17,
+      "name": "Minecraft",
+      "price": 17,
+      "stock": 7
+    }
+  ],
+  "profiles": [
+    {
+      "CPF": "000.111.222-33",
+      "name": "Rodolfolfinh",
+      "pfp": "https://t0.gstatic.com/licensed-image?q=tbn:ANd9GcQdVrDbX5tCAQ6lX9axvmA12KMoRadrK1F7Pgls0RBotbvCJ9C-rd-_TNNKD70f4oQL",
+      "role": "Admin",
+      "id": 1
+    },
+    {
+      "CPF": "111.222.333-44",
+      "name": "Richarlisson",
+      "pfp": "https://i.redd.it/uee1ns69gax71.png",
+      "role": "User",
+      "id": 2
+    }
+  ]
+}

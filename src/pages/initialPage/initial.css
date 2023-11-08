@@ -1,0 +1,75 @@
+.initial_button {
+    height: 50px;
+}
+
+.title_store {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.initial_div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.initial_div h1 {
+    padding: 15px;
+}
+
+.div_products {
+    width: 55%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+.button_card_list{
+    width: 60%;
+    height: 30px;
+    margin-top: -15px;
+    border-radius: 7px;
+    border: 1px solid rgb(6, 59, 6);
+    background-color: #eb4b45;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.button_card_list:hover{
+    background-color:#d63934; ;
+    transition: .2s;
+}
+
+.footer_pages {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom:-10px
+}
+
+.footer_pages button {
+    height: 30px;
+    width: 50px;
+    border: 1px solid rgb(3, 61, 3);
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: #3db61e; ;
+    transition: .2s;
+}
+
+.footer_pages button:hover {
+    background-color: #2c9b11;
+    transition: .2s;
+}
+
+.modal {
+    position: fixed;
+    bottom: 35px;
+}

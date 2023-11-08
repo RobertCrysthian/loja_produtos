@@ -1,0 +1,57 @@
+
+
+.div_modal {
+width: 120vh;
+height: 90%;
+background-color: rgb(17, 17, 17);
+border-radius: 15px;
+margin: 10px;
+border: 2px solid rgba(99, 219, 99, 0.192);
+}
+
+.background_style {
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: rgba(0, 0, 0, 0.726);
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.icon {
+    cursor: pointer;
+    position: fixed;
+    width: 30px;
+    height: 30px;
+    margin: 10px;
+    color: rgb(23, 160, 30);
+
+}
+
+.div_icon {
+    display:flex;
+    justify-content: end;
+}
+
+.div_content {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    text-align: center;
+}
+
+.title_modal {
+    text-align: center;
+    margin-top: 2%;
+}
+
+.description_modal {
+    text-align: center;
+}
+
+

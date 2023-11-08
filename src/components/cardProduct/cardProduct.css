@@ -1,0 +1,39 @@
+.section_card_product{
+    margin: 15px;
+    text-align: center;
+}
+
+.section_card_product img {
+    width: 90%;
+    border-radius: 10px;
+}
+
+.div_button{
+    display:flex;
+    justify-content: space-between;
+}
+
+.button{
+    width: 48.5%;
+    height: 36px;
+    background-color: #3db61e;
+    border: 1px solid rgb(24, 75, 22);
+    border-radius: 7px;
+    cursor: pointer;
+    transition: .2s;
+}
+.button:hover {
+    background-color: #3aa320;
+    transition: .2s;
+}
+
+.hidden {
+    display: none;
+}
+
+
+@media (max-width:1600px) {
+    .section_card_product img{
+        width:50%;
+    }
+}

@@ -1,0 +1,14 @@
+.section_edit_itens {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.div_edit_itens {
+    background-color: aliceblue;
+    width: 90%;
+    height: 800px;
+    border-radius: 30px;
+    background-color: rgb(41, 41, 41);
+}
