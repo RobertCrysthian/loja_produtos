@@ -51,7 +51,7 @@
     justify-content: center;
     align-items: center;
     position: absolute;
-    bottom:-10px
+    bottom:10px
 }
 
 .footer_pages button {
@@ -71,5 +71,12 @@
 
 .modal {
     position: fixed;
-    bottom: 35px;
+    bottom: 50px;
+}
+
+
+@media (max-width: 1600px) {
+    .div_products {
+        width: 70%;
+    }
 }

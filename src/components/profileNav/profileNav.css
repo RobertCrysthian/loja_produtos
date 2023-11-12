@@ -95,3 +95,13 @@ margin-bottom: 10px;
 .section_modal_profile img {
     max-width: 50%;
 }
+
+@media (max-width:1600px) {
+    .profile_nav_menu:hover {
+        transition: .2s;
+        width: 280px;
+    }
+    .profile_nav_active {
+        width: 280px;
+    }
+}

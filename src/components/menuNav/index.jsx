@@ -31,7 +31,7 @@ export default function MenuNav ({activeModal}) {
                     <li className="menu_item">
                         <Link to='/editItens'>
                             <span className='icon_lateral_menu'><AiOutlineHome/></span>
-                            <span className='txt_link'>Editar Produtos</span>
+                            <span className='txt_link'>Administração</span>
                         </Link>
                     </li>
                 }

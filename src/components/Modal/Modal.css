@@ -54,4 +54,12 @@ align-items: center;
     text-align: center;
 }
 
+@media (max-width: 1600px) {
+    .div_content{
+        width: 100%;
+    }
 
+    .div_modal {
+        width: 140vh;
+    }
+}

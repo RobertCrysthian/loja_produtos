@@ -13,10 +13,10 @@
       "stock": 5
     },
     {
-      "id": 3,
-      "name": "Uva",
-      "price": 15,
-      "stock": 9
+      "name": "Uvaa",
+      "price": 16,
+      "stock": 10,
+      "id": 3
     },
     {
       "id": 4,
@@ -37,12 +37,6 @@
       "stock": 20
     },
     {
-      "id": 7,
-      "name": "Minecraft",
-      "price": 17,
-      "stock": 7
-    },
-    {
       "id": 8,
       "name": "Banana",
       "price": 10,
@@ -55,52 +49,28 @@
       "stock": 5
     },
     {
-      "id": 10,
-      "name": "Uva",
-      "price": 15,
-      "stock": 9
-    },
-    {
       "id": 11,
-      "name": "Pão",
-      "price": 10,
-      "stock": 12
-    },
-    {
-      "id": 12,
       "name": "Alface",
       "price": 16,
       "stock": 16
     },
     {
-      "id": 13,
+      "id": 12,
       "name": "Minecraft",
       "price": 17,
       "stock": 7
     },
     {
-      "id": 14,
-      "name": "Banana",
-      "price": 10,
-      "stock": 10
+      "name": "Batatinha",
+      "price": 100,
+      "stock": 900,
+      "id": 14
     },
     {
-      "id": 15,
       "name": "Abacate",
       "price": 20,
-      "stock": 5
-    },
-    {
-      "id": 16,
-      "name": "Uva",
-      "price": 15,
-      "stock": 9
-    },
-    {
-      "id": 17,
-      "name": "Minecraft",
-      "price": 17,
-      "stock": 7
+      "stock": 19,
+      "id": 15
     }
   ],
   "profiles": [
@@ -112,8 +82,8 @@
       "id": 1
     },
     {
-      "CPF": "111.222.333-44",
       "name": "Richarlisson",
+      "CPF": "111.222.333-44",
       "pfp": "https://i.redd.it/uee1ns69gax71.png",
       "role": "User",
       "id": 2

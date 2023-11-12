@@ -10,6 +10,7 @@ import { CpfContext } from '../../context/cpfs';
 import { useNavigate } from 'react-router-dom';
 import ProfileNav from '../../components/profileNav';
 import { MenuContext } from '../../context/menuButton';
+import { decrement, increment } from '../../functions/changePages';
 
 
 
@@ -28,8 +29,6 @@ export default function InitialPage() {
       navigate('/login')
     }
   })
-
-
 
   useEffect(() => {
     axios.get("http://localhost:8080/posts")
@@ -75,21 +74,6 @@ export default function InitialPage() {
   const [incrementatorModal, setIncrementatorModal] = useState(8)
   const [pageNumberModal, setPageNumberModal] = useState(1)
 
-  const increment = (setMinItens, minItens, setMaxItens, maxItens, setPageNumber, pageNumber, array) => {
-    if(maxItens < array.length-1){
-      setMinItens(minItens + incrementator);
-      setMaxItens(maxItens + incrementator);
-      setPageNumber(pageNumber+1);
-    }
-  }
-
-  const decrement = (setMinItens, minItens, setMaxItens, maxItens, setPageNumber, pageNumber) => {
-    if(minItens > 0){
-      setMinItens(minItens - incrementator);
-      setMaxItens(maxItens - incrementator);
-      setPageNumber(pageNumber-1)
-    }
-  }
 
   const sortCardList = cardList.sort((a,b) => {
     return b - a
@@ -113,9 +97,9 @@ export default function InitialPage() {
         })}
       </div>
       <div className="footer_pages">
-        <button onClick={() => decrement(setMinItens, minItens, setMaxItens, maxItens, setPageNumber, pageNumber)}>{`<<`}</button>
+        <button onClick={() => decrement(setMinItens, minItens, setMaxItens, maxItens, setPageNumber, pageNumber, incrementator)}>{`<<`}</button>
         <h1>{pageNumber}</h1>
-        <button onClick={() => increment(setMinItens, minItens, setMaxItens, maxItens, setPageNumber, pageNumber, productData)}>{`>>`}</button>
+        <button onClick={() => increment(setMinItens, minItens, setMaxItens, maxItens, setPageNumber, pageNumber, productData, incrementator)}>{`>>`}</button>
       </div>
       <Modal title="Meus itens do carrinho:" isOpen={openModal} closeModal={() => setOpenModal(!openModal)} cardList={cardList} description={`Subtotal: R$${subTotal.toFixed(2)}`}>
         {sortCardList.map((item, index) => {
@@ -130,9 +114,9 @@ export default function InitialPage() {
 
         })}
         <div className="footer_pages modal">
-          <button onClick={() => decrement(setMinItensModal, minItensModal, setMaxItensModal, maxItensModal, setPageNumberModal, pageNumberModal)}>{`<<`}</button>
+          <button onClick={() => decrement(setMinItensModal, minItensModal, setMaxItensModal, maxItensModal, setPageNumberModal, pageNumberModal, incrementatorModal)}>{`<<`}</button>
           <h1>{pageNumberModal}</h1>
-          <button onClick={() => increment(setMinItensModal, minItensModal, setMaxItensModal, maxItensModal, setPageNumberModal, pageNumberModal, sortCardList)}>{`>>`}</button>
+          <button onClick={() => increment(setMinItensModal, minItensModal, setMaxItensModal, maxItensModal, setPageNumberModal, pageNumberModal, sortCardList, incrementatorModal)}>{`>>`}</button>
         </div>
       </Modal>
 

@@ -36,4 +36,7 @@
     .section_card_product img{
         width:50%;
     }
+    .section_card_product {
+        width: 80%;
+    }
 }

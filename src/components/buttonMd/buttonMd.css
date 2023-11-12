@@ -1,0 +1,18 @@
+
+
+.buttonMd {
+    width: 80%;
+    height: 35px;
+    border: 1px solid rgb(6, 92, 6);
+    background-color: #52c524;
+    border-radius: 7px;
+    margin-top: .5%;
+    cursor: pointer;
+    transition: .2s;
+    font-size: 18px;
+}
+
+.buttonMd:hover {
+    background-color: #2c9b11;
+    transition: .2s;
+}
