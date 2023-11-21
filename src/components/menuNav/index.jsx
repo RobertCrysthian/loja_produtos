@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom'
 
 export default function MenuNav ({activeModal}) {
 
-    const {cpfUser, setCpfUser} = useContext(CpfContext)
+    const {sessionRole} = useContext(CpfContext)
     const {buttonMenu} = useContext(MenuContext)
 
     return(
@@ -27,7 +27,7 @@ export default function MenuNav ({activeModal}) {
                         <span className='txt_link'>Home</span>
                     </a>
                 </li>
-                {cpfUser[0] !== undefined && cpfUser[0].role === "Admin" &&                
+                {sessionRole !== undefined && sessionRole === "Admin" &&                
                     <li className="menu_item">
                         <Link to='/editItens'>
                             <span className='icon_lateral_menu'><AiOutlineHome/></span>

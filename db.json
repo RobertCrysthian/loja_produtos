@@ -76,8 +76,8 @@
   "profiles": [
     {
       "CPF": "000.111.222-33",
-      "name": "Rodolfolfinh",
-      "pfp": "https://t0.gstatic.com/licensed-image?q=tbn:ANd9GcQdVrDbX5tCAQ6lX9axvmA12KMoRadrK1F7Pgls0RBotbvCJ9C-rd-_TNNKD70f4oQL",
+      "name": "Rodolfo",
+      "pfp": "https://i.pinimg.com/236x/9c/ed/1a/9ced1a7ebbd4dfb7aaa31e02b4d8a826.jpg",
       "role": "Admin",
       "id": 1
     },
@@ -87,6 +87,88 @@
       "pfp": "https://i.redd.it/uee1ns69gax71.png",
       "role": "User",
       "id": 2
+    }
+  ],
+  "Itens": [
+    {
+      "userId": "1",
+      "name": "Banana",
+      "price": 10,
+      "stock": 10,
+      "productId": 1,
+      "id": 10
+    },
+    {
+      "userId": "1",
+      "name": "Abacate",
+      "price": 20,
+      "stock": 5,
+      "productId": 2,
+      "id": 11
+    },
+    {
+      "userId": "1",
+      "name": "Uvaa",
+      "price": 16,
+      "stock": 10,
+      "productId": 3,
+      "id": 12
+    },
+    {
+      "userId": "1",
+      "name": "Banana",
+      "price": 10,
+      "stock": 10,
+      "productId": 1,
+      "id": 13
+    },
+    {
+      "userId": "1",
+      "name": "Abacate",
+      "price": 20,
+      "stock": 5,
+      "productId": 2,
+      "id": 14
+    },
+    {
+      "userId": "1",
+      "name": "Pão",
+      "price": 10,
+      "stock": 12,
+      "productId": 4,
+      "id": 15
+    },
+    {
+      "userId": "1",
+      "name": "Uvaa",
+      "price": 16,
+      "stock": 10,
+      "productId": 3,
+      "id": 16
+    },
+    {
+      "userId": "2",
+      "name": "Banana",
+      "price": 10,
+      "stock": 10,
+      "productId": 1,
+      "id": 17
+    },
+    {
+      "userId": "2",
+      "name": "Abacate",
+      "price": 20,
+      "stock": 5,
+      "productId": 2,
+      "id": 18
+    },
+    {
+      "userId": "1",
+      "name": "Banana",
+      "price": 10,
+      "stock": 10,
+      "productId": 1,
+      "id": 19
     }
   ]
 }

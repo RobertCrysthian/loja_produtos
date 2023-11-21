@@ -8,6 +8,7 @@ import ButtonMd from '../../components/buttonMd'
 import InputMD from '../../components/inputMd'
 import { useNavigate } from 'react-router-dom'
 import { CpfContext } from '../../context/cpfs'
+import { verifyAdm } from '../../functions/verifications'
 
 export default function EditUsers () {
     const [apiData, setApiData] = useState()
@@ -23,23 +24,17 @@ export default function EditUsers () {
     const [editPfp, setEditPfp] = useState('')
     const [editRole, setEditRole] = useState('')
     const [itemId, setItemId] = useState('')
-    const {cpfUser} = useContext(CpfContext)
+    const {sessionCPF, sessionRole} = useContext(CpfContext)
 
     const navigate = useNavigate()
     useEffect(() => {
-        if(cpfUser.length === 0 || cpfUser === undefined){
-            navigate('/login')
-        }
-        else if(cpfUser !== undefined && cpfUser[0].role !== 'Admin'){
-            navigate('/login')
-        }
+        verifyAdm(sessionCPF, sessionRole, navigate)
     })
 
     useEffect(() => {
     axios.get('http://localhost:8080/profiles')
         .then(response => setApiData(response.data))
     },[])
-    console.log(apiData)
 
     const editItens = (item) => {
         setOpenModal(!openModal)

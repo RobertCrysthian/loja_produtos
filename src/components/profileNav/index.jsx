@@ -6,45 +6,48 @@ import { useNavigate } from 'react-router-dom'
 import Modal from '../Modal'
 import axios from 'axios'
 
-export default function ProfileNav ({activeModal2}) {
+export default function ProfileNav () {
 
     const {profileButton} = useContext(MenuContext)
-    const {cpfUser, setCpfUser} = useContext(CpfContext)
+    const {sessionCPF, sessionName, sessionPfp, sessionRole, sessionId} = useContext(CpfContext)
+    console.log(sessionPfp)
     const navigate = useNavigate()
     const [openModal, setOpenModal] = useState(false)
-    const [nameInput, setNameInput] = useState(cpfUser[0] !== undefined && cpfUser[0].name)
-    const [linkInput, setLinkInput] = useState(cpfUser[0] !== undefined && cpfUser[0].pfp)
+    const [nameInput, setNameInput] = useState(sessionName !== undefined && sessionName)
+    const [linkInput, setLinkInput] = useState(sessionPfp !== undefined && sessionPfp)
 
-    useEffect(() => {
-      if(cpfUser.length === 0 || cpfUser === undefined){
-        navigate('/login')
-      }
-    }, [])
+     useEffect(() => {
+       if(sessionCPF === null || sessionCPF === undefined){
+         navigate('/login')
+       }
+     }, [])
 
 
     const changeData = () => {
-        axios.put(`http://localhost:8080/profiles/${cpfUser[0] !== undefined && cpfUser[0].id}`, {
-            CPF: cpfUser[0].CPF,
+        axios.put(`http://localhost:8080/profiles/${sessionId !== undefined && sessionId}`, {
+            CPF: sessionCPF,
             name: nameInput,
             pfp: linkInput,
-            role: cpfUser[0].role
+            role: sessionRole
         })
-        alert('Dados alterados com sucesso. Logue novamente para seus dados aparecem de forma atualizada')
-        logOff()
+        sessionStorage.setItem('sessionName', nameInput)
+        sessionStorage.setItem('sessionPfp', linkInput)
+        alert('Dados alterados com sucesso.')
+        window.location.reload()
     }
 
     const logOff = () => {
-        setCpfUser(undefined)
+        sessionStorage.clear()
         navigate('/login')
     }
 
-    console.log(cpfUser)
+
     return(
         <nav className={`profile_nav_menu ${profileButton? 'profile_nav_active' : ''} `}>
             <div className='div_profile_nav'>
-                <h1>Nome: {cpfUser[0] !== undefined && cpfUser[0].name}</h1>
-                <h1>CPF:{cpfUser[0] !== undefined && cpfUser[0].CPF}</h1>
-                <img className={`${profileButton? '' : 'hide_image'} `} src={cpfUser[0] !== undefined && cpfUser[0].pfp} alt='imagem de perfil' />
+                <h1>Nome: {sessionName !== undefined && sessionName}</h1>
+                <h1>CPF:{sessionCPF !== undefined && sessionCPF}</h1>
+                <img className={`${profileButton? '' : 'hide_image'} `} src={sessionPfp !== undefined && sessionPfp} alt='imagem de perfil' />
             </div>
             <div className='button_logoff_div'>
                     <button onClick={() => setOpenModal(!openModal)}>Editar Perfil</button>
@@ -58,7 +61,7 @@ export default function ProfileNav ({activeModal2}) {
                 <h1>Link da foto de perfil:</h1>
                 <input value={linkInput} onChange={(e) => setLinkInput(e.target.value)}/>
                 <h1>Foto:</h1>
-                <img src={cpfUser[0] !== undefined && cpfUser[0].pfp} />
+                <img src={sessionPfp !== undefined && sessionPfp} />
                 <button onClick={() => changeData()}>Enviar</button>
             </div>
 

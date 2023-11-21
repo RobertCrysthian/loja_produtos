@@ -8,6 +8,7 @@ import InputMD from '../../components/inputMd'
 import ButtonMd from '../../components/buttonMd'
 import { useNavigate } from 'react-router-dom'
 import { CpfContext } from '../../context/cpfs'
+import { verifyAdm } from '../../functions/verifications'
 
 
 
@@ -33,17 +34,13 @@ export default function EditItens() {
     const [newStock, setNewStock] = useState('')
     const [itemId, setItemId] = useState('')
 
-    const {cpfUser} = useContext(CpfContext)
+    const {sessionCPF, sessionRole} = useContext(CpfContext)
 
     const navigate = useNavigate()
     useEffect(() => {
-        if(cpfUser.length === 0 || cpfUser === undefined){
-            navigate('/login')
-        }
-        else if(cpfUser !== undefined && cpfUser[0].role !== 'Admin'){
-            navigate('/login')
-        }
+        verifyAdm(sessionCPF, sessionRole, navigate)
     })
+
 
     const editItens = (item) => {
         setOpenModal(!openModal)
@@ -80,7 +77,7 @@ export default function EditItens() {
     axios.get('http://localhost:8080/posts')
         .then(response => setApiData(response.data))
     },[])
-    console.log(dataEdit)
+    
     return(
         <section className='section_edit_itens'>
 

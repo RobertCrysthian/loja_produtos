@@ -25,11 +25,15 @@ export default function Login() {
         const validate = cpfList.filter((e) => {return e.CPF === inputValue})
         if(validate.length > 0) {
             setCpfUser(validate)
+            sessionStorage.setItem('sessionCPF', validate[0].CPF)
+            sessionStorage.setItem('sessionName', validate[0].name)
+            sessionStorage.setItem('sessionRole', validate[0].role)
+            sessionStorage.setItem('sessionPfp', validate[0].pfp)
+            sessionStorage.setItem('sessionId', validate[0].id)
             navigate('/')
         }
     }
-    
-    console.log(cpfUser)
+
     return(
         <section className='section_login'>
             <form className='form_login' onSubmit={login}>

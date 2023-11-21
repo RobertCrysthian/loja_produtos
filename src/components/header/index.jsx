@@ -12,7 +12,6 @@ export default function Header () {
 
     const {buttonMenu, setButtonMenu, profileButton, setProfileButton} = useContext(MenuContext)
 
-    console.log(buttonMenu)
     return(
         <>
         <div className="div_header">
